@@ -4,6 +4,18 @@
 #include <chrono>
 #include <functional>
 
+// Function to display the array in the console as a series of '#' characters
+void display_array(const std::vector<int>& arr) {
+    for (int val : arr) {
+        for (int i = 0; i < val; ++i) {
+            std::cout << '#';
+        }
+        std::cout << std::endl;
+    }
+    std::cout << "----------------" << std::endl;
+    //pausing the execution of the current thread for 500ms
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+}
 
 // Bubble sort algorithm implementation
 void bubble_sort(std::vector<int>& arr) {
@@ -46,7 +58,7 @@ int main() {
             cout << "Enter values from the menu please! " << endl;
             return 5;
     }
-    }
+
 
     return 0;
 }
