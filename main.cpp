@@ -4,6 +4,18 @@
 #include <chrono>
 #include <functional>
 
+
+// Bubble sort algorithm implementation
+void bubble_sort(std::vector<int>& arr) {
+    for (size_t i = 0; i < arr.size(); ++i) {
+        for (size_t j = 0; j < arr.size() - 1 - i; ++j) {
+            if (arr[j] > arr[j + 1]) {
+                std::swap(arr[j], arr[j + 1]);
+            }
+        }
+        display_array(arr);
+    }
+}
 //driver of the sorting functions
 int main() {
     using namespace std;
@@ -25,10 +37,10 @@ int main() {
             bubble_sort(arr);
             break;
         case 2:
-            selection_sort(arr);
+            //selection_sort(arr);
             break;
         case 3:
-            insertion_sort(arr);
+            //insertion_sort(arr);
             break;
         default:
             cout << "Enter values from the menu please! " << endl;
