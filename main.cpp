@@ -3,7 +3,6 @@
 #include <thread>
 #include <chrono>
 
-
 // Function to display the array in the console as a series of '#' characters
 void display_array(const std::vector<int>& arr) {
     for (int val : arr) {
